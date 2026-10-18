@@ -86,8 +86,8 @@ export const projects: Project[] = [
     description:
       'A fully open family of unified multimodal models, accompanied by training recipes and data for both visual understanding and generation.',
     image: blip3oImage,
-    imageAlt: 'BLIP3-o architecture for unified image understanding and generation.',
-    imageSource: 'https://arxiv.org/abs/2505.09568',
+    imageAlt: 'BLIP3-o examples combining visual understanding with high-quality image generation.',
+    imageSource: 'https://github.com/JiuhaiChen/BLIP3o',
     links: [
       { label: 'Paper', href: 'https://arxiv.org/abs/2505.09568' },
       { label: 'PDF', href: 'https://arxiv.org/pdf/2505.09568' },
