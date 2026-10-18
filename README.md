@@ -29,9 +29,7 @@ GitHub Pages serves the prebuilt site from the repository root on `master`. Run 
 ## Asset sources
 
 - Portrait: supplied by Zhiyang Xu.
-- Grounded-VideoLLM preview: [official repository](https://github.com/WHB139426/Grounded-Video-LLM).
 - BLIP3o-NEXT and BLIP3-o previews: [official repository](https://github.com/JiuhaiChen/BLIP3o).
-- SPARTUN3D preview: [official repository](https://github.com/zhangyuejoslin/Spartun3D).
 - Vision-Flan preview: [official project site](https://vision-flan.github.io/).
 - MultiInstruct preview: [official repository](https://github.com/PLUM-Lab/MultiInstruct).
 - Newsreader and Manrope are self-hosted through Fontsource and distributed under the SIL Open Font License.

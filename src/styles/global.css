@@ -300,12 +300,6 @@ img {
   object-position: 50% 44%;
 }
 
-.project--spartun3d .project__visual img {
-  padding: 0;
-  object-fit: cover;
-  object-position: left center;
-}
-
 .project__meta {
   display: flex;
   flex-wrap: wrap;

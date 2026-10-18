@@ -5,15 +5,13 @@ import test from 'node:test';
 const projectSource = await readFile(new URL('../src/data/projects.ts', import.meta.url), 'utf8');
 
 const expectedOrder = [
-  'grounded-videollm',
   'blip3o-next',
   'blip3o',
-  'spartun3d',
   'vision-flan',
   'multiinstruct',
 ];
 
-test('contains exactly the six selected projects in newest-first order', () => {
+test('contains exactly the four selected projects in newest-first order', () => {
   const slugs = [...projectSource.matchAll(/slug: '([^']+)'/g)].map((match) => match[1]);
   assert.deepEqual(slugs, expectedOrder);
 });
@@ -30,14 +28,15 @@ test('marks both BLIP3o papers with the requested equal first authorship', () =>
 
 test('does not include legacy template or publication content', () => {
   assert.doesNotMatch(projectSource, /B\.S\. in GitHub|Professor Hub|Project Name/i);
-  assert.equal((projectSource.match(/slug: '/g) ?? []).length, 6);
+  assert.doesNotMatch(projectSource, /Grounded-VideoLLM|SPARTUN3D/i);
+  assert.equal((projectSource.match(/slug: '/g) ?? []).length, 4);
 });
 
-test('renders one accessible single page with six project cards', async () => {
+test('renders one accessible single page with four project cards', async () => {
   const html = await readFile(new URL('../dist/index.html', import.meta.url), 'utf8');
   assert.equal((html.match(/<main[\s>]/g) ?? []).length, 1);
   assert.equal((html.match(/<h1[\s>]/g) ?? []).length, 1);
-  assert.equal((html.match(/<article[^>]+data-project=/g) ?? []).length, 6);
+  assert.equal((html.match(/<article[^>]+data-project=/g) ?? []).length, 4);
   assert.match(html, /href="#about"/);
   assert.match(html, /href="#projects"/);
   assert.match(html, /alt="Portrait of Zhiyang Xu"/);

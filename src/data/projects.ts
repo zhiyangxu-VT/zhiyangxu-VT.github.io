@@ -1,9 +1,7 @@
 import type { ImageMetadata } from 'astro';
 
-import groundedVideoLlmImage from '../assets/projects/grounded-videollm.png';
 import blip3oNextImage from '../assets/projects/blip3o-next.png';
 import blip3oImage from '../assets/projects/blip3o.png';
-import spartun3dImage from '../assets/projects/spartun3d.png';
 import visionFlanImage from '../assets/projects/vision-flan.png';
 import multiInstructImage from '../assets/projects/multiinstruct.png';
 
@@ -28,33 +26,6 @@ export type Project = {
 };
 
 export const projects: Project[] = [
-  {
-    slug: 'grounded-videollm',
-    title: 'Grounded-VideoLLM: Sharpening Fine-grained Temporal Grounding in Video Large Language Models',
-    date: 'November 2025',
-    venue: 'Findings of EMNLP 2025',
-    authors: [
-      'Haibo Wang',
-      'Zhiyang Xu',
-      'Yu Cheng',
-      'Shizhe Diao',
-      'Yufan Zhou',
-      'Yixin Cao',
-      'Qifan Wang',
-      'Weifeng Ge',
-      'Lifu Huang',
-    ],
-    description:
-      'A video language model designed to sharpen fine-grained temporal grounding while preserving strong multimodal understanding.',
-    image: groundedVideoLlmImage,
-    imageAlt: 'Grounded-VideoLLM localizes an event within a longer video timeline.',
-    imageSource: 'https://github.com/WHB139426/Grounded-Video-LLM',
-    links: [
-      { label: 'Paper', href: 'https://aclanthology.org/2025.findings-emnlp.50/' },
-      { label: 'PDF', href: 'https://aclanthology.org/2025.findings-emnlp.50.pdf' },
-      { label: 'Code', href: 'https://github.com/WHB139426/Grounded-Video-LLM' },
-    ],
-  },
   {
     slug: 'blip3o-next',
     title: 'BLIP3o-NEXT: Next Frontier of Native Image Generation',
@@ -123,23 +94,6 @@ export const projects: Project[] = [
       { label: 'Code', href: 'https://github.com/JiuhaiChen/BLIP3o' },
       { label: 'Models', href: 'https://huggingface.co/BLIP3o/BLIP3o-Model' },
       { label: 'Data', href: 'https://huggingface.co/datasets/BLIP3o/BLIP3o-Pretrain' },
-    ],
-  },
-  {
-    slug: 'spartun3d',
-    title: 'SPARTUN3D: Situated Spatial Understanding of 3D World in Large Language Models',
-    date: '2025',
-    venue: 'ICLR 2025',
-    authors: ['Yue Zhang', 'Zhiyang Xu', 'Ying Shen', 'Parisa Kordjamshidi', 'Lifu Huang'],
-    description:
-      'A benchmark and approach for reasoning about situated spatial relationships in complex 3D environments with large language models.',
-    image: spartun3dImage,
-    imageAlt: 'SPARTUN3D illustrates spatial reasoning from an agent situated in a 3D scene.',
-    imageSource: 'https://github.com/zhangyuejoslin/Spartun3D',
-    links: [
-      { label: 'Paper', href: 'https://arxiv.org/abs/2410.03878' },
-      { label: 'PDF', href: 'https://arxiv.org/pdf/2410.03878' },
-      { label: 'Code', href: 'https://github.com/zhangyuejoslin/Spartun3D' },
     ],
   },
   {
