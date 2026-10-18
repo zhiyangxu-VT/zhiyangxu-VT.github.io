@@ -138,17 +138,6 @@ img {
   filter: saturate(0.82) contrast(1.02);
 }
 
-.hero__portrait-caption {
-  position: absolute;
-  right: -0.1rem;
-  bottom: -2.7rem;
-  color: var(--ink-soft);
-  font-size: 0.67rem;
-  font-weight: 650;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-}
-
 .hero__content {
   max-width: 680px;
 }
@@ -170,16 +159,6 @@ img {
   font-weight: 420;
   letter-spacing: -0.065em;
   line-height: 0.82;
-}
-
-.hero__role {
-  max-width: 650px;
-  margin: 0 0 1.35rem;
-  font-family: var(--serif);
-  font-size: clamp(1.35rem, 2.2vw, 1.82rem);
-  font-weight: 430;
-  letter-spacing: -0.015em;
-  line-height: 1.28;
 }
 
 .hero__statement {
@@ -496,7 +475,6 @@ img {
 
 @media print {
   .site-header,
-  .hero__portrait-caption,
   .site-footer a {
     display: none;
   }
