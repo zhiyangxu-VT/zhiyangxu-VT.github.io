@@ -1,0 +1,33 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+import Hero from '../components/Hero.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+import { projects } from '../data/projects';
+
+const title = 'Zhiyang Xu — Multimodal AI Researcher';
+const description =
+  'Zhiyang Xu is a Computer Science Ph.D. student at Virginia Tech researching multimodal learning, visual instruction tuning, and grounded reasoning.';
+---
+
+<BaseLayout {title} {description}>
+  <div id="top"></div>
+  <Header />
+  <main>
+    <Hero />
+
+    <section class="projects shell" id="projects" aria-labelledby="projects-title">
+      <div class="section-heading">
+        <p class="eyebrow">Selected research</p>
+        <h2 id="projects-title">Projects</h2>
+        <p>Recent work across multimodal generation, video grounding, and spatial reasoning.</p>
+      </div>
+
+      <div class="projects__list">
+        {projects.map((project, index) => <ProjectCard {project} {index} />)}
+      </div>
+    </section>
+  </main>
+  <Footer />
+</BaseLayout>

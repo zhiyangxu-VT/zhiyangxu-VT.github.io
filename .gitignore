@@ -1,2 +1,6 @@
 _site/
+.worktrees/
+node_modules/
+dist/
+.astro/
 

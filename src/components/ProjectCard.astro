@@ -1,0 +1,67 @@
+---
+import { Image } from 'astro:assets';
+import type { Project } from '../data/projects';
+
+interface Props {
+  project: Project;
+  index: number;
+}
+
+const { project, index } = Astro.props;
+const number = String(index + 1).padStart(2, '0');
+---
+
+<article class={`project project--${project.slug}`} data-project={project.slug}>
+  <a
+    class="project__visual"
+    href={project.links[0].href}
+    target="_blank"
+    rel="noreferrer"
+    aria-label={`${project.title} paper (opens in a new tab)`}
+  >
+    <Image
+      src={project.image}
+      alt={project.imageAlt}
+      widths={[560, 840, 1120]}
+      sizes="(max-width: 760px) 100vw, 42vw"
+      loading={index < 2 ? 'eager' : 'lazy'}
+      quality={86}
+    />
+  </a>
+
+  <div class="project__content">
+    <div class="project__meta">
+      <span class="project__number" aria-hidden="true">{number}</span>
+      <span>{project.venue}</span>
+      <span aria-hidden="true">·</span>
+      <span>{project.date}</span>
+    </div>
+
+    <h3><a href={project.links[0].href} target="_blank" rel="noreferrer">{project.title}</a></h3>
+
+    <p class="project__authors">
+      {project.authors.map((author, authorIndex) => (
+        <>
+          <span class:list={{ 'author-self': author.startsWith('Zhiyang Xu') }}>{author}</span>{authorIndex < project.authors.length - 1 ? ', ' : ''}
+        </>
+      ))}
+    </p>
+
+    {project.contributionNote && <p class="project__note">{project.contributionNote}</p>}
+    {project.award && <p class="project__award">{project.award}</p>}
+    <p class="project__description">{project.description}</p>
+
+    <div class="project__links" aria-label={`${project.title} resources`}>
+      {project.links.map((link) => (
+        <a
+          href={link.href}
+          target="_blank"
+          rel="noreferrer"
+          aria-label={`${link.label} (opens in a new tab)`}
+        >
+          {link.label} <span aria-hidden="true">↗</span>
+        </a>
+      ))}
+    </div>
+  </div>
+</article>

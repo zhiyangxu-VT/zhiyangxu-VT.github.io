@@ -1,0 +1,48 @@
+---
+import { Image } from 'astro:assets';
+import portrait from '../assets/portrait.jpg';
+---
+
+<section class="hero shell" id="about" aria-labelledby="hero-title">
+  <div class="hero__portrait-wrap">
+    <Image
+      class="hero__portrait"
+      src={portrait}
+      alt="Portrait of Zhiyang Xu"
+      widths={[480, 720, 960]}
+      sizes="(max-width: 720px) 100vw, 42vw"
+      loading="eager"
+      fetchpriority="high"
+      quality={88}
+    />
+    <span class="hero__portrait-caption" aria-hidden="true">Blacksburg, Virginia</span>
+  </div>
+
+  <div class="hero__content">
+    <p class="eyebrow">Multimodal AI Researcher</p>
+    <h1 id="hero-title">Zhiyang Xu</h1>
+    <p class="hero__role">
+      Ph.D. student in Computer Science at Virginia Tech, advised by Prof. Lifu Huang.
+    </p>
+    <p class="hero__statement">
+      I build multimodal systems that learn from and reason across images, video,
+      language, and 3D environments. My work focuses on visual instruction tuning,
+      unified understanding and generation, and grounded reasoning.
+    </p>
+    <div class="hero__links" aria-label="Contact and profiles">
+      <a href="mailto:zhiyangx@vt.edu">Email</a>
+      <a
+        href="https://scholar.google.com/citations?user=11zbVUAAAAAJ&hl=en&oi=sra"
+        target="_blank"
+        rel="noreferrer"
+        aria-label="Google Scholar (opens in a new tab)"
+      >Google Scholar <span aria-hidden="true">↗</span></a>
+      <a
+        href="https://github.com/zhiyangxu-VT"
+        target="_blank"
+        rel="noreferrer"
+        aria-label="GitHub (opens in a new tab)"
+      >GitHub <span aria-hidden="true">↗</span></a>
+    </div>
+  </div>
+</section>
