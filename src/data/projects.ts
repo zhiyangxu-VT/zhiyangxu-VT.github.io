@@ -34,7 +34,7 @@ export const projects: Project[] = [
     authors: [
       'Zhiyang Xu*',
       'Jiuhai Chen*',
-      'Le Xue',
+      'Le Xue*',
       'Xichen Pan',
       'Shusheng Yang',
       'Can Qin',

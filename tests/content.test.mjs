@@ -24,6 +24,9 @@ test('marks both BLIP3o papers with the requested equal first authorship', () =>
     assert.ok(record.indexOf("'Zhiyang Xu*'") < record.indexOf("'Jiuhai Chen*'"));
     assert.match(record, /\* Equal contribution/);
   }
+
+  const nextRecord = records.find((entry) => entry.startsWith('blip3o-next'));
+  assert.match(nextRecord, /'Le Xue\*'/);
 });
 
 test('does not include legacy template or publication content', () => {
