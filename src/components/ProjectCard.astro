@@ -14,6 +14,7 @@ const number = String(index + 1).padStart(2, '0');
 <article class={`project project--${project.slug}`} data-project={project.slug}>
   <a
     class="project__visual"
+    style={`--project-aspect: ${project.image.width} / ${project.image.height}`}
     href={project.links[0].href}
     target="_blank"
     rel="noreferrer"

@@ -29,7 +29,7 @@ GitHub Pages serves the prebuilt site from the repository root on `master`. Run 
 ## Asset sources
 
 - Portrait: supplied by Zhiyang Xu.
-- BLIP3o-NEXT and BLIP3-o previews: [official repository](https://github.com/JiuhaiChen/BLIP3o).
-- Vision-Flan preview: [official project site](https://vision-flan.github.io/).
+- BLIP3o-NEXT preview: [official repository](https://github.com/JiuhaiChen/BLIP3o); BLIP3-o preview: Figure 1 from the [official paper](https://arxiv.org/abs/2505.09568).
+- Vision-Flan preview: Figure 2 from the [official paper](https://aclanthology.org/2024.findings-acl.905/).
 - MultiInstruct preview: [official repository](https://github.com/PLUM-Lab/MultiInstruct).
 - Newsreader and Manrope are self-hosted through Fontsource and distributed under the SIL Open Font License.

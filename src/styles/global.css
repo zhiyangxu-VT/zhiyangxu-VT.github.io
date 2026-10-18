@@ -274,7 +274,7 @@ img {
 .project__visual {
   display: grid;
   overflow: hidden;
-  aspect-ratio: 16 / 10;
+  aspect-ratio: var(--project-aspect);
   align-self: start;
   place-items: center;
   border: 1px solid rgba(151, 139, 118, 0.45);
@@ -285,19 +285,13 @@ img {
 .project__visual img {
   width: 100%;
   height: 100%;
-  padding: clamp(0.7rem, 1.5vw, 1.25rem);
+  padding: clamp(0.35rem, 0.8vw, 0.7rem);
   object-fit: contain;
   transition: transform 600ms var(--ease);
 }
 
 .project__visual:hover img {
   transform: scale(1.018);
-}
-
-.project--blip3o .project__visual img {
-  padding: 0;
-  object-fit: cover;
-  object-position: 50% 44%;
 }
 
 .project__meta {
@@ -474,10 +468,6 @@ img {
 
   .project {
     padding-block: 2.7rem;
-  }
-
-  .project__visual {
-    aspect-ratio: 4 / 3;
   }
 
   .site-footer {

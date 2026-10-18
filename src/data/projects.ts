@@ -86,8 +86,8 @@ export const projects: Project[] = [
     description:
       'A fully open family of unified multimodal models, accompanied by training recipes and data for both visual understanding and generation.',
     image: blip3oImage,
-    imageAlt: 'BLIP3-o examples combining visual understanding with high-quality image generation.',
-    imageSource: 'https://github.com/JiuhaiChen/BLIP3o',
+    imageAlt: 'BLIP3-o architecture for unified image understanding and generation.',
+    imageSource: 'https://arxiv.org/abs/2505.09568',
     links: [
       { label: 'Paper', href: 'https://arxiv.org/abs/2505.09568' },
       { label: 'PDF', href: 'https://arxiv.org/pdf/2505.09568' },
@@ -115,8 +115,8 @@ export const projects: Project[] = [
     description:
       'A large-scale visual instruction-tuning effort built from diverse human-labeled tasks to improve general multimodal instruction following.',
     image: visionFlanImage,
-    imageAlt: 'Vision-Flan training combines broad task diversity with visual instruction tuning.',
-    imageSource: 'https://vision-flan.github.io/',
+    imageAlt: 'Vision-Flan task diversity compared with prior visual instruction-tuning datasets.',
+    imageSource: 'https://aclanthology.org/2024.findings-acl.905/',
     links: [
       { label: 'Paper', href: 'https://aclanthology.org/2024.findings-acl.905/' },
       { label: 'PDF', href: 'https://aclanthology.org/2024.findings-acl.905.pdf' },
