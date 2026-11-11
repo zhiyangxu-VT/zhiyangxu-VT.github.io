@@ -12,22 +12,39 @@ const number = String(index + 1).padStart(2, '0');
 ---
 
 <article class={`project project--${project.slug}`} data-project={project.slug}>
-  <a
-    class="project__visual"
-    href={project.links[0].href}
-    target="_blank"
-    rel="noreferrer"
-    aria-label={`${project.title} paper (opens in a new tab)`}
-  >
-    <Image
-      src={project.image}
-      alt={project.imageAlt}
-      widths={[560, 840, 1120]}
-      sizes="(max-width: 760px) 100vw, 42vw"
-      loading={index < 2 ? 'eager' : 'lazy'}
-      quality={86}
-    />
-  </a>
+  {project.video ? (
+    <div class="project__visual project__visual--video">
+      <video
+        src={project.video}
+        aria-label={project.videoAlt}
+        autoplay
+        muted
+        loop
+        playsinline
+        controls
+        preload="auto"
+      >
+        <a href={project.links[0].href}>View the PAN 2 technical blog.</a>
+      </video>
+    </div>
+  ) : project.image ? (
+    <a
+      class="project__visual"
+      href={project.links[0].href}
+      target="_blank"
+      rel="noreferrer"
+      aria-label={`${project.title} project page (opens in a new tab)`}
+    >
+      <Image
+        src={project.image}
+        alt={project.imageAlt ?? ''}
+        widths={[560, 840, 1120]}
+        sizes="(max-width: 760px) 100vw, 42vw"
+        loading={index < 2 ? 'eager' : 'lazy'}
+        quality={86}
+      />
+    </a>
+  ) : null}
 
   <div class="project__content">
     <div class="project__meta">

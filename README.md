@@ -24,11 +24,12 @@ Project metadata lives in `src/data/projects.ts`. Page components are under `src
 
 ## Deployment
 
-GitHub Pages serves the prebuilt site from the repository root on `master`. Run `npm run prepare:pages` before committing: it builds the Astro source and synchronizes `index.html`, `favicon.svg`, and `_astro/` to the root.
+GitHub Pages serves the prebuilt site from the repository root on `master`. Run `npm run prepare:pages` before committing: it builds the Astro source and synchronizes `index.html`, `favicon.svg`, `_astro/`, and `media/` to the root.
 
 ## Asset sources
 
 - Portrait: supplied by Zhiyang Xu.
+- PAN 2 preview video: supplied by Zhiyang Xu from the [official technical blog](https://ifm.ai/blog/pan2/).
 - BLIP3o-NEXT and BLIP3-o previews: [official repository](https://github.com/JiuhaiChen/BLIP3o).
 - Vision-Flan preview: Figure 2 from the [official paper](https://aclanthology.org/2024.findings-acl.905/).
 - MultiInstruct preview: [official repository](https://github.com/PLUM-Lab/MultiInstruct).

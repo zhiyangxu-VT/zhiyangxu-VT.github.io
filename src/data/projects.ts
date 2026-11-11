@@ -19,13 +19,32 @@ export type Project = {
   contributionNote?: string;
   award?: string;
   description: string;
-  image: ImageMetadata;
-  imageAlt: string;
-  imageSource: string;
+  image?: ImageMetadata;
+  imageAlt?: string;
+  imageSource?: string;
+  video?: string;
+  videoAlt?: string;
   links: ProjectLink[];
 };
 
 export const projects: Project[] = [
+  {
+    slug: 'pan2',
+    title: 'PAN 2: A Foundation World Model for Physical Intelligence',
+    date: 'November 2026',
+    venue: 'Institute of Foundation Models',
+    authors: ['PAN Team'],
+    description:
+      'An open, general-purpose world model that simulates the consequences of text-described actions as physically grounded video.',
+    video: '/media/pan2-koi.mp4',
+    videoAlt: 'PAN 2 simulation of koi swimming around floating plants in a pond.',
+    links: [
+      { label: 'Technical Blog', href: 'https://ifm.ai/blog/pan2/' },
+      { label: 'Project', href: 'https://ifm.ai/pan/' },
+      { label: 'Code', href: 'https://github.com/ifm-ai/PAN2' },
+      { label: 'Models', href: 'https://huggingface.co/IFM/PAN2' },
+    ],
+  },
   {
     slug: 'blip3o-next',
     title: 'BLIP3o-NEXT: Next Frontier of Native Image Generation',
@@ -70,8 +89,8 @@ export const projects: Project[] = [
     authors: [
       'Zhiyang Xu*',
       'Jiuhai Chen*',
-      'Xichen Pan',
-      'Yushi Hu',
+      'Xichen Pan*',
+      'Yushi Hu*',
       'Can Qin',
       'Tom Goldstein',
       'Lifu Huang',
