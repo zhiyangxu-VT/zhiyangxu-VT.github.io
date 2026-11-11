@@ -8,8 +8,6 @@ const dist = path.join(root, 'dist');
 await rm(path.join(root, '_astro'), { recursive: true, force: true });
 await mkdir(path.join(root, '_astro'), { recursive: true });
 await cp(path.join(dist, '_astro'), path.join(root, '_astro'), { recursive: true });
-await rm(path.join(root, 'media'), { recursive: true, force: true });
-await cp(path.join(dist, 'media'), path.join(root, 'media'), { recursive: true });
 await cp(path.join(dist, 'index.html'), path.join(root, 'index.html'));
 await cp(path.join(dist, 'favicon.svg'), path.join(root, 'favicon.svg'));
 

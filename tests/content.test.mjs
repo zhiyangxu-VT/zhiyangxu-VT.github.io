@@ -49,12 +49,11 @@ test('renders one accessible single page with five project cards', async () => {
   assert.match(html, /href="#projects"/);
   assert.match(html, /alt="Portrait of Zhiyang Xu"/);
   assert.match(html, /Equal contribution/);
-  assert.match(html, /<video[^>]+src="\/media\/pan2-koi\.mp4"/);
+  assert.match(html, /<video[^>]+src="https:\/\/raw\.githubusercontent\.com\/[^\"]+\/media\/pan2-koi\.mp4"/);
   assert.match(html, /autoplay/);
   assert.match(html, /muted/);
   assert.match(html, /loop/);
   assert.match(html, /aria-label="[^"]+ \(opens in a new tab\)"/);
-  await access(new URL('../media/pan2-koi.mp4', import.meta.url));
 });
 
 test('does not retain the legacy Jekyll site or sample collections', async () => {

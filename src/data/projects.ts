@@ -36,7 +36,8 @@ export const projects: Project[] = [
     authors: ['PAN Team'],
     description:
       'An open, general-purpose world model that simulates the consequences of text-described actions as physically grounded video.',
-    video: '/media/pan2-koi.mp4',
+    video:
+      'https://raw.githubusercontent.com/zhiyangxu-VT/zhiyangxu-VT.github.io/095b73bcd23bfa3f2f262e70a5dc1c3d16cf274c/media/pan2-koi.mp4',
     videoAlt: 'PAN 2 simulation of koi swimming around floating plants in a pond.',
     links: [
       { label: 'Technical Blog', href: 'https://ifm.ai/blog/pan2/' },
