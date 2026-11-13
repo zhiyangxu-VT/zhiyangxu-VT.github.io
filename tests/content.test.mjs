@@ -53,6 +53,7 @@ test('renders one accessible single page with five project cards', async () => {
   assert.match(html, /autoplay/);
   assert.match(html, /muted/);
   assert.match(html, /loop/);
+  assert.match(html, /class="project__video-intro is-visible"[^>]*>PAN 2<\/span>/);
   assert.match(html, /aria-label="[^"]+ \(opens in a new tab\)"/);
 });
 

@@ -26,6 +26,7 @@ const number = String(index + 1).padStart(2, '0');
       >
         <a href={project.links[0].href}>View the PAN 2 technical blog.</a>
       </video>
+      <span class="project__video-intro is-visible" aria-hidden="true">PAN 2</span>
     </div>
   ) : project.image ? (
     <a
@@ -82,3 +83,17 @@ const number = String(index + 1).padStart(2, '0');
     </div>
   </div>
 </article>
+
+<script>
+  document.querySelectorAll<HTMLElement>('.project__visual--video').forEach((visual) => {
+    const video = visual.querySelector<HTMLVideoElement>('video');
+    const intro = visual.querySelector<HTMLElement>('.project__video-intro');
+    if (!video || !intro) return;
+
+    const syncIntro = () => intro.classList.toggle('is-visible', video.currentTime < 1.6);
+    video.addEventListener('loadeddata', syncIntro);
+    video.addEventListener('timeupdate', syncIntro);
+    video.addEventListener('seeked', syncIntro);
+    syncIntro();
+  });
+</script>
