@@ -24,7 +24,7 @@ Project metadata lives in `src/data/projects.ts`. Page components are under `src
 
 ## Deployment
 
-GitHub Pages serves the prebuilt site from the repository root on `master`. Run `npm run prepare:pages` before committing: it builds the Astro source and synchronizes `index.html`, `favicon.svg`, and `_astro/` to the root.
+The Astro source lives on `master`, while GitHub Pages serves the prebuilt site from the root of `gh-pages`. Run `npm run prepare:pages` before publishing: it builds the source and synchronizes `index.html`, `favicon.svg`, and `_astro/` to the repository root. Copy those outputs plus `.nojekyll` to `gh-pages`, then push that branch.
 
 ## Asset sources
 
